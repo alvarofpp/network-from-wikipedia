@@ -19,7 +19,6 @@ Run `to_graphml.py` providing:
 | `-d`, `--degree` | No | Number of degree that will be used in the filter of nodes. Equal to or greater than this value. | `2` |
 | `-l`, `--layers` | No | Number of search layers. | `2` |
 | `-o`, `--output` | No | Output filename. | `'output'` |
-| `-t`, `--threads` | No | Number of threads that will be used. | `-1` |
 | `-v`, `--verbose` | No | Increase output verbosity. | `False` |
 
 ### Examples

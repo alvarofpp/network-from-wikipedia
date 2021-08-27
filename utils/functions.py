@@ -6,7 +6,6 @@ from .helpers import check_source, print_if
 
 def download(source: str = None,
              verbose: bool = False,
-             threads: int = -1,
              layers: int = 2):
     # Check source
     code = check_source(source)

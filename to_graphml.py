@@ -21,10 +21,6 @@ def main():
                         default='output',
                         type=str,
                         help='Output filename.')
-    parser.add_argument('-t', '--threads',
-                        default=-1,
-                        type=int,
-                        help='Number of threads that will be used.')
     parser.add_argument('-v', '--verbose',
                         default=False,
                         action='store_true',
@@ -36,13 +32,14 @@ def main():
     graph = download(
         source=args_dict['source'],
         verbose=args_dict['verbose'],
-        threads=args_dict['threads'],
         layers=args_dict['layers']
     )
     graph = clean(graph)
-    graph = truncate(graph,
+    graph = truncate(
+        graph,
         verbose=args_dict['verbose'],
-        degree=args_dict['degree'])
+        degree=args_dict['degree']
+    )
     nx.write_graphml(graph, '{}.graphml'.format(args_dict['output']))
 
 
