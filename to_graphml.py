@@ -27,7 +27,6 @@ def main():
                         help='Increase output verbosity.')
     args = parser.parse_args()
     args_dict = dict(vars(args).items())
-    print(args_dict, args)
 
     graph = download(
         source=args_dict['source'],
