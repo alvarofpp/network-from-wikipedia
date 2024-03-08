@@ -1,7 +1,8 @@
-import wikipedia
 import networkx as nx
-from .constants import SOURCE_URL, STOPS
-from .helpers import check_source, print_if
+import wikipedia
+
+from utils.constants import SOURCE_URL, STOPS
+from utils.helpers import check_source, print_if
 
 
 def download(source: str = None,
@@ -32,7 +33,7 @@ def download(source: str = None,
         # Attempt to download the selected page.
         try:
             wiki = wikipedia.page(page)
-        except:
+        except Exception:
             layer, page = todo_lst[0]
             print_if(verbose, 'Could not load', page)
             continue
@@ -85,6 +86,6 @@ def truncate(graph,
     # Select a subgraph with 'core' nodes
     subgraph = nx.subgraph(graph, core)
 
-    print_if(verbose, '{} nodes, {} edges'.format(len(subgraph), nx.number_of_edges(subgraph)))
+    print_if(verbose, f'{len(subgraph)} nodes, {nx.number_of_edges(subgraph)} edges')
 
     return subgraph

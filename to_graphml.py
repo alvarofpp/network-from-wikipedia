@@ -1,10 +1,13 @@
 import argparse
+
 import networkx as nx
-from utils.functions import download, clean, truncate
+
+from utils.functions import clean, download, truncate
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Download and make a graphml file from Wikipedia page.')
+    parser = argparse.ArgumentParser(description='Download and make a graphml'
+                                                 'file from Wikipedia page.')
     parser.add_argument('-s', '--source',
                         required=True,
                         type=str,
@@ -12,7 +15,8 @@ def main():
     parser.add_argument('-d', '--degree',
                         default=2,
                         type=int,
-                        help='Number of degree that will be used in the filter of nodes. Equal to or greater than this value.')
+                        help='Number of degree that will be used in the filter'
+                             'of nodes. Equal to or greater than this value.')
     parser.add_argument('-l', '--layers',
                         default=2,
                         type=str,

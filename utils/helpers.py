@@ -1,4 +1,4 @@
-from .constants import SOURCE_URL, SOURCE_TITLE
+from utils.constants import SOURCE_TITLE, SOURCE_URL
 
 
 def check_source(source: str = None) -> int:
