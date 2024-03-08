@@ -49,7 +49,9 @@ python3 to_graphml.py --source='Complex network' --layers=5 --degree=10 --output
 ```
 
 ## Contributing
-Contributions are more than welcome. Fork, improve and make a pull request. For bugs, ideas for improvement or other, please create an [issue](https://github.com/alvarofpp/dataset-network-from-wikipedia/issues).
+Contributions are more than welcome. Fork, improve and make a pull request.
+For bugs, ideas for improvement or other, please create an [issue](https://github.com/alvarofpp/dataset-network-from-wikipedia/issues).
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the GNU Affero General Public License - see
+the [LICENSE.md](LICENSE) file for details.
